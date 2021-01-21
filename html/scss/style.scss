@@ -117,7 +117,8 @@ Author URI: http://themeforest.net/user/Ansonika/
 			}
 		}
 	}
-	header.sticky .main-menu>ul>li span {
+	header.sticky .main-menu>ul>li span,
+	header.sticky .main-menu>ul>li{
 		>a {
 			color: #444;
 		}
