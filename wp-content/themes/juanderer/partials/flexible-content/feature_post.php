@@ -48,7 +48,7 @@ $tours = get_posts($args);
             <!-- /box_grid -->
         </div>
         <!-- /row -->
-        <p class="btn_home_align"><a href="https://nirvan.studio/juanderer/tour/"
+        <p class="btn_home_align"><a href="<?php the_sub_field('link');?>"
                                      class="btn_1 rounded">View all Tours</a></p>
         <hr class="large">
     </div>
