@@ -27,9 +27,9 @@
                     <ul class="clearfix">
                         <ul class="clearfix">
                             <li><a href="#description" class="active">Description</a></li>
-                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#programs">Itinerary</a></li>
                             <li><a href="#Exclude">Includes/Exclude</a></li>
-                            <?php if (get_field('map')): ?>
+                            <?php if (get_field('map_image')): ?>
                                 <li><a href="#location">Location</a></li>
                             <?php endif; ?>
                             <li><a href="#sidebar">Booking</a></li>
@@ -48,10 +48,12 @@
                             </div>
                             <hr class="m-0">
                             <div class="description-block pt-4 mb-4" id="programs">
-                                <h3>Program </h3>
+                                <h3>Itinerary </h3>
                                 <p>
                                     <?php the_field('program_description') ?>
                                 </p>
+                                <?php $counter = 1;
+                                ?>
                                 <ul class="cbp_tmtimeline">
                                     <?php while (have_rows('program')):
                                         the_row();
@@ -60,8 +62,11 @@
                                             <time class="cbp_tmtime mt-2"><span
                                                         class="d-none">30 min.</span><span>Day</span>
                                             </time>
-                                            <div class="cbp_tmicon">
-                                                <?php the_sub_field('days'); ?>
+                                            <div class="cbp_tmicon ">
+                                                <?php
+                                                echo $counter++;
+                                                //                                                the_sub_field('days');
+                                                ?>
                                             </div>
                                             <div class="cbp_tmlabel">
                                                 <div class="hidden-xs">
@@ -80,7 +85,7 @@
                                 <p><?php the_field('paragraph'); ?></p>
                                 <div class="row" id="Exclude">
                                     <div class="col-lg-6">
-                                        <h4><?php the_field('cost_inclue'); ?></h4>
+                                        <h4>Cost Includes</h4>
                                         <ul class="bullets bullets--tick">
                                             <?php while (have_rows('cost_include_rep')):
                                                 the_row(); ?>
@@ -89,7 +94,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h4><?php the_field('cost_exclude'); ?></h4>
+                                        <h4>Cost Excludes</h4>
                                         <ul class="bullets bullets--cross">
                                             <?php while (have_rows('cost_exclude_rep')):
                                                 the_row(); ?>
@@ -101,16 +106,41 @@
                                 <!-- /row -->
                             </div>
                             <hr class="m-0">
-                            <?php if (get_field('map')): ?>
+                            <?php if (get_field('map_image')): ?>
                                 <div class="description-block pt-4 mb-4" id="location">
                                     <h3>Location</h3>
                                     <?php
-                                    $map_iframe = get_field('map');
-                                    echo $map_iframe;
-                                    ?>
+                                    $map_image = get_field('map_image'); ?>
+                                    <img src="<?= $map_image; ?>" alt="">
                                     <!-- End Map -->
                                 </div>
                             <?php endif; ?>
+                            <hr class="m-0">
+                            <div class="description-block pt-4 mb-4" id="gallery">
+                                <h3>Gallery</h3>
+                                <div class="grid">
+                                    <ul class="magnific-gallery">
+                                        <?php $images = get_field('tour_gallery');
+                                        foreach ($images as $image):
+                                            ?>
+                                            <li>
+                                                <figure>
+                                                    <img src="<?= $image ?>" alt="">
+                                                    <figcaption>
+                                                        <div class="caption-content">
+                                                            <a href="<?= $image ?>" title=""
+                                                               data-effect="mfp-zoom-in">
+                                                                <i class="pe-7s-albums"></i>
+                                                            </a>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </section>
                         <hr class="m-0">
                         <div class="pt-4">
@@ -123,10 +153,11 @@
                         <div class="box_detail booking">
                             <div class="price d-flex justify-content-between align-items-center">
                                 <p class="mb-0"><?php the_field('days_night'); ?> </p>
-                                <span><?php the_field('price'); ?> </span>
+                                <span>$<?php the_field('price'); ?><small>/person</small> </span>
 
                             </div>
-                            <p><?php the_content(); ?></p>
+                            <!--                            <p>--><?php //the_content();
+                            ?><!--</p>-->
                             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
                                class="btn_1 full-width purchase mb-3">Inquiry</a>
                             <div class="badge-wrap"><span class="badge">Or</span></div>

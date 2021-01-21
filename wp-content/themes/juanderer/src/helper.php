@@ -1,4 +1,5 @@
 <?php
+
 use function NextGenImage\getImageInWebp;
 use function NextGenImage\resizeImage;
 
@@ -26,18 +27,19 @@ function getResizedImage($url, $size = array())
  * function to add meta tags to event single page.
  * these meta tags are required for proper functioning of facebook share feature
  */
-function tour_share_meta() {
+function tour_share_meta()
+{
     global $post;
 
-    if ( $post ) {
+    if ($post) {
         if (is_singular('Tour')) {
             $image_url = get_the_post_thumbnail_url($post->ID, 'full');
-            $image = getResizedImage( $image_url, [ 500, 500 ] );
+            $image = getResizedImage($image_url, [500, 500]);
             ?>
-            <meta property="og:url" content="<?= get_the_permalink( $post->ID ) ?>"/>
+            <meta property="og:url" content="<?= get_the_permalink($post->ID) ?>"/>
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="<?php the_title(); ?>"/>
-            <meta property="og:description" content="<?php the_content();?>"/>
+            <meta property="og:description" content="<?php the_content(); ?>"/>
             <meta property="og:image" content="<?= $image['orig'] ?>"/>
             <meta property="og:image:width" content="500"/>
             <meta property="og:image:height" content="500"/>
@@ -46,24 +48,25 @@ function tour_share_meta() {
     }
 }
 
-add_action( 'wp_head', 'tour_share_meta' );
+add_action('wp_head', 'tour_share_meta');
 
 /**
  * function to add meta tags to event single page.
  * these meta tags are required for proper functioning of facebook share feature
  */
-function hotel_share_meta() {
+function hotel_share_meta()
+{
     global $post;
 
-    if ( $post ) {
+    if ($post) {
         if (is_singular('Hotel')) {
             $image_url = get_the_post_thumbnail_url($post->ID, 'full');
-            $image = getResizedImage( $image_url, [ 500, 500 ] );
+            $image = getResizedImage($image_url, [500, 500]);
             ?>
-            <meta property="og:url" content="<?= get_the_permalink( $post->ID ) ?>"/>
+            <meta property="og:url" content="<?= get_the_permalink($post->ID) ?>"/>
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="<?php the_title(); ?>"/>
-            <meta property="og:description" content="<?php the_content();?>"/>
+            <meta property="og:description" content="<?php the_content(); ?>"/>
             <meta property="og:image" content="<?= $image['orig'] ?>"/>
             <meta property="og:image:width" content="500"/>
             <meta property="og:image:height" content="500"/>
@@ -72,5 +75,7 @@ function hotel_share_meta() {
     }
 }
 
-add_action( 'wp_head', 'hotel_share_meta' );
+add_action('wp_head', 'hotel_share_meta');
+
+
 

@@ -11,14 +11,12 @@ function my_custom_post_Tours()
         'description' => '',
         'public' => true,
         'menu_position' => 5,
-        'supports' => array('title', 'editor','thumbnail'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'has_archive' => true,
-        'taxonomies' => array('tour_cat')
-
+        'taxonomies' => array('tour_cat'),
     );
     register_post_type('tour', $args);
 }
-
 add_action('init', 'my_custom_post_Tours');
 
 function my_custom_post_hotels()
@@ -33,7 +31,7 @@ function my_custom_post_hotels()
         'description' => '',
         'public' => true,
         'menu_position' => 5,
-        'supports' => array('title', 'editor','thumbnail'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'has_archive' => true,
 //        'taxonomies' => array('category'),
 

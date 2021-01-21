@@ -111,3 +111,5 @@ add_taxonomy( "tour-category", 'tour', [
 ] );
 // clear the permalinks after the post type has been registered
 flush_rewrite_rules();
+
+

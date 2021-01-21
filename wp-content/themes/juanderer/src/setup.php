@@ -3,19 +3,11 @@ function juanderer_setup() {
     add_theme_support( 'custom-logo' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'title-tag' );
-//    add_theme_support( 'woocommerce' );
-
-//    add_image_size( 'photography_thumbnail', 99999, 600, false );
-//    add_image_size( 'photography_small', 800, 800, false );
-//    add_image_size( 'photography_medium', 1920, 1920, false );
-//    add_image_size( 'photography_large', 1920, 1024, false );
-//    add_image_size( 'photography_preview', 2000, 2000, false );
-//    add_image_size( 'gallery_thumbnail', 300, 300, true );
-//    add_image_size( 'profile_gallery', 350, 350, true );
 
     register_nav_menus( [
         'primary' => 'Primary'
     ] );
+    add_image_size('category-thumb', 300, 200,true);
 
 }
 

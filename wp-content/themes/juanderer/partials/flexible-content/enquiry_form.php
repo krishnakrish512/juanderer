@@ -33,10 +33,10 @@ if (($_GET['tour_id'])) {
                     <div class="box_detail booking">
                         <div class="price d-flex justify-content-between align-items-center">
                             <p class="mb-0"><?php the_field('days_night', $tour_id) ?> </p>
-                            <span><?php the_field('price', $tour_id); ?></small></span>
+                            <span>$<?php the_field('price', $tour_id); ?>/<small>person</small></span>
 
                         </div>
-                        <p><?php echo get_post_field('post_content', $tour_id); ?></p>
+<!--                        <p>--><?php //echo get_post_field('post_content', $tour_id); ?><!--</p>-->
                         <div class="badge-wrap"><span class="badge">Or</span></div>
 
                         <div class="inquiry-by mt-3 d-flex align-items-center justify-content-between">
