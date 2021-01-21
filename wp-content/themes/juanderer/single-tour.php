@@ -15,7 +15,7 @@
                     <?php $images = get_field('tour_gallery');
                     foreach ($images as $image):
                         ?>
-                        <a href="<?= $image ?>" class="btn_photos" title="Photo title"
+                        <a href="<?= $image; ?>" class="btn_photos" title="Photo title"
                            data-effect="mfp-zoom-in">View photos</a>
                     <?php endforeach; ?>
 				</span>

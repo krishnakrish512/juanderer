@@ -8,6 +8,7 @@ function juanderer_setup() {
         'primary' => 'Primary'
     ] );
     add_image_size('category-thumb', 300, 200,true);
+    add_image_size( 'thumb-crazy', 500,500, true);
 
 }
 
