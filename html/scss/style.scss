@@ -1385,6 +1385,8 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+
+
 }
 .loading .flex-viewport {
   max-height: 300px;
@@ -1637,10 +1639,18 @@ html[xmlns] .flexslider .slides {
 			@include box-shadow (0px 0px 15px 0px rgba(0, 0, 0, 0.5));
 			overflow: hidden;
 			cursor: pointer;
+			height: 140px;
 			&:hover img{
 					@include transform (scale(1.2));
 				}
 			img {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top:0;
+				bottom:0;
+				-o-object-fit: cover;
+				object-fit: cover;
 				@include transform (scale(1));
 				opacity: 0.4;
 				@include transition-default (all, 0.3s, ease-in-out);
@@ -4861,7 +4871,7 @@ a.grid_item.latest_adventure{
 }
 
 .call_section.adventure {
-	background: url(../images/bg_call_action_adventure.jpg) center center no-repeat fixed;
+	//background: url(../images/bg_call_action_adventure.jpg) center center no-repeat fixed;
    	@include background-size(cover);
 }
 
@@ -7092,6 +7102,10 @@ ul.plan-features {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+
+	.bg-cover--fixed{
+		background-attachment: fixed;
+	}
 }
 
 .widget{
