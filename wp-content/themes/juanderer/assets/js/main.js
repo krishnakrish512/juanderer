@@ -7,10 +7,10 @@
 		$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 		$('body').delay(350);
 		$('.hero_in h1,.hero_in form').addClass('animated');
-		$('.hero_single, .hero_in').addClass('start_bg_zoom');
+		$('.hero_single, .hero_in .hero_in-image').addClass('start_bg_zoom');
 		$(window).scroll();
 	});
-	
+
 	// Sticky nav
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 1) {
@@ -420,30 +420,8 @@
 	    }).trigger('resize');
 	});
 
-
-	$(window).on('load', function(){
-		'use strict';
-		$('#carousel_slider').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			itemWidth: 280,
-			itemMargin: 25,
-			asNavFor: '#slider'
-		});
-		$('#slider').flexslider({
-			animation: "fade",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			sync: "#carousel_slider",
-			start: function(slider) {
-				$('body').removeClass('loading');
-			}
-		});
-	});
+	//input disabled
 	$('input[name="tour"]').attr('disabled', 'disabled');
-
-})(window.jQuery);
+	
+})(window.jQuery); 
 
