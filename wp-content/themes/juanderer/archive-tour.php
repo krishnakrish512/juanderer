@@ -18,25 +18,27 @@
                     ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="box_grid">
-                            <figure>
-                                <!--                                <a href="#0" class="wish_bt"></a>-->
-                                <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail('full'); ?>"
-                                                                         class="img-fluid" alt="" width="800"
-                                                                         height="533">
-                                    <div class="read_more"><span>Read more</span></div>
-                                </a>
-                                <small><?php $terms = get_the_terms($post->ID, 'tour-category');
-                                    foreach ($terms as $term) {
-                                        echo $term_name = $term->name;
-                                    }
-                                    ?></small>
-                            </figure>
+                            <?php if (has_post_thumbnail()): ?>
+                                <figure>
+                                    <!--                                <a href="#0" class="wish_bt"></a>-->
+                                    <a href="<?php the_permalink(); ?>"><img
+                                                src="<?php the_post_thumbnail('category-thumb'); ?>"
+                                                class="img-fluid" alt="" width="800"
+                                                height="533">
+                                        <div class="read_more"><span>Read more</span></div>
+                                    </a>
+                                    <small><?php $terms = get_the_terms($post->ID, 'tour-category');
+                                        foreach ($terms as $term) {
+                                            echo $term_name = $term->name;
+                                        }
+                                        ?></small>
+                                </figure>
+                            <?php endif; ?>
                             <div class="wrapper">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <p><?php the_content(); ?></p>
-                                <span class="price">From <strong><?php the_field('price'); ?></strong> </span>
+                                <p><?php the_field('intro_text'); ?></p>
+                                <span class="price">From <strong>$<?php the_field('price'); ?><small>/person</small></strong> </span>
                             </div>
-
                         </div>
                     </div>
                 <?php endwhile; ?>
