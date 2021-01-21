@@ -443,6 +443,7 @@
 			}
 		});
 	});
+	$('input[name="tour"]').attr('disabled', 'disabled');
 
 })(window.jQuery);
 

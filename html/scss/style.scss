@@ -3320,6 +3320,9 @@ section#reviews {
 }
 
 .booking {
+	br{
+		display: none;
+	}
 	input {
 		font-weight: 500;
 		height: 45px;
@@ -3493,6 +3496,7 @@ img.thumb_visit {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	overflow: hidden;
 }
 .cbp_tmtimeline > li .cbp_tmlabel p{
 	margin-bottom:0;
@@ -4472,7 +4476,7 @@ ul.cart_details{
 		padding: 0;
 		margin: -3px;
 		min-height: 100%;
-		width: 25%;
+		width: 33.33%;
 		background-color: #000;
 		list-style: none;
 		@include tablet {width:50%;}
@@ -4515,7 +4519,7 @@ ul.cart_details{
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				margin-top: -30px;
+				margin-top: -10px;
 				margin-left: -100px;
 				width: 200px;
 				@include transform (translate(0px, 15px));
@@ -4529,7 +4533,7 @@ ul.cart_details{
 				}
 			}
 			i {
-				@include fontSize(30px);
+				@include fontSize(20px);
 			}
 			p {
 				margin-bottom: 0;
@@ -4822,7 +4826,7 @@ a.grid_item.latest_adventure{
 }
 
 .banner{
-	background: url(../images/banner_bg_desktop.jpg) center center no-repeat;
+	//background: url(../images/banner_bg_desktop.jpg) center center no-repeat;
    	@include background-size(cover);
    	width: 100%;
    	height: 420px;
@@ -7086,4 +7090,66 @@ ul.plan-features {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.widget{
+	position: relative;
+    display: block;
+    margin-bottom: 15px;
+	&-title{
+	    padding: 15px 0;
+	    margin-bottom: 20px;
+	    border-bottom: 1px solid #ededed;
+
+	    h4{
+	    	padding: 0;
+		    margin: 0;
+		    font-weight: 500;
+		    line-height: 1;
+		    font-size: 15px;
+		    font-size: 0.9375rem;
+	    }
+	}
+}
+.comments-list{
+	padding: 0;
+    list-style: none;
+    li{
+		margin-bottom: 10px;
+	    display: table;
+	    width: 100%;
+    }
+    h3{
+		font-size: 14px;
+	    padding: 0 0 0;
+	    margin-bottom: 0;
+	    margin-top: 5px;
+	    text-transform: capitalize;
+	    letter-spacing: 0;
+	    a{
+	    	color: #333;
+	    }
+    }
+}
+.alignleft{
+	 float: left;
+    margin: 0 15px 10px 0;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+
+    img{
+    	    width: auto;
+    height: 80px;
+    }
+}
+
+.inquiry-fomr-content{
+	br{
+		display:none;
+	}
 }
