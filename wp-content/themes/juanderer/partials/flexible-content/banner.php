@@ -4,7 +4,9 @@
             <ul class="slides">
                 <?php while (have_rows('banner_repeater')):
                     the_row();
-                    $image = get_sub_field('image_url')
+                    $image = get_sub_field('image_url');
+//                    var_dump($image);
+//                    exit();
                     ?>
                     <li>
                         <img src="<?= $image ?>" alt="">
@@ -22,7 +24,7 @@
                 <ul class="slides">
                     <?php while (have_rows('banner_repeater')):
                         the_row();
-                        $image = get_sub_field('image_url')
+                        $image = get_sub_field('image_url','category-thumb')
                         ?>
                         <li>
                             <img src="<?= $image; ?>" alt="">

@@ -10,13 +10,16 @@
                 <div class="container">
                     <h1 class="fadeInUp"><span></span><?php the_title(); ?></h1>
                 </div>
-                <span class="magnific-gallery">
-                    <?php $images = get_field('gallery');
+                <?php if (get_field('tour_gallery')): ?>
+                    <span class="magnific-gallery">
+                    <?php $images = get_field('tour_gallery');
                     foreach ($images as $image):
                         ?>
-                        <a href="<?= $image['url'] ?>" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">View photos</a>
+                        <a href="<?= $image ?>" class="btn_photos" title="Photo title"
+                           data-effect="mfp-zoom-in">View photos</a>
                     <?php endforeach; ?>
 				</span>
+                <?php endif; ?>
             </div>
         </section>
         <!--/hero_in-->
@@ -32,6 +35,9 @@
                             <?php if (get_field('map_image')): ?>
                                 <li><a href="#location">Location</a></li>
                             <?php endif; ?>
+                            <?php if (get_field('tour_gallery')): ?>
+                                <li><a href="#gallery">Gallery</a></li>
+                            <?php endif ?>
                             <li><a href="#sidebar">Booking</a></li>
                         </ul>
 
@@ -116,30 +122,32 @@
                                 </div>
                             <?php endif; ?>
                             <hr class="m-0">
-                            <div class="description-block pt-4 mb-4" id="gallery">
-                                <h3>Gallery</h3>
-                                <div class="grid">
-                                    <ul class="magnific-gallery">
-                                        <?php $images = get_field('tour_gallery');
-                                        foreach ($images as $image):
-                                            ?>
-                                            <li>
-                                                <figure>
-                                                    <img src="<?= $image ?>" alt="">
-                                                    <figcaption>
-                                                        <div class="caption-content">
-                                                            <a href="<?= $image ?>" title=""
-                                                               data-effect="mfp-zoom-in">
-                                                                <i class="pe-7s-albums"></i>
-                                                            </a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                            <?php if (get_field('tour_gallery')): ?>
+                                <div class="description-block pt-4 mb-4" id="gallery">
+                                    <h3>Gallery</h3>
+                                    <div class="grid">
+                                        <ul class="magnific-gallery">
+                                            <?php $images = get_field('tour_gallery');
+                                            foreach ($images as $image):
+                                                ?>
+                                                <li>
+                                                    <figure>
+                                                        <img src="<?= $image ?>" alt="">
+                                                        <figcaption>
+                                                            <div class="caption-content">
+                                                                <a href="<?= $image ?>" title=""
+                                                                   data-effect="mfp-zoom-in">
+                                                                    <i class="pe-7s-albums"></i>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endif ?>
 
                         </section>
                         <hr class="m-0">
@@ -154,8 +162,9 @@
                             <div class="price d-flex justify-content-between align-items-center">
                                 <p class="mb-0"><?php the_field('days_night'); ?> </p>
                                 <span>$<?php the_field('price'); ?><small>/person</small> </span>
-
                             </div>
+                            <p>You can make an inquiry to know further detail about the trip. We will be happy to take
+                                care of your inquiry.</p>
                             <!--                            <p>--><?php //the_content();
                             ?><!--</p>-->
                             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
