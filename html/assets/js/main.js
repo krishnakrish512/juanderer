@@ -10,7 +10,7 @@
 		$('.hero_single, .hero_in .hero_in-image').addClass('start_bg_zoom');
 		$(window).scroll();
 	});
-	
+
 	// Sticky nav
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 1) {
@@ -419,6 +419,9 @@
 	        }
 	    }).trigger('resize');
 	});
+
+	//input disabled
+	$('input[name="tour"]').attr('disabled', 'disabled');
 	
 })(window.jQuery); 
 
