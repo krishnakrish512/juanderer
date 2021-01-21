@@ -81,7 +81,6 @@ Author URI: http://themeforest.net/user/Ansonika/
 			a {
 				position: relative;
 				margin: 0;
-				padding: 0;
 				display: block;
 				padding: 5px 10px;
 				white-space: nowrap;
@@ -89,7 +88,8 @@ Author URI: http://themeforest.net/user/Ansonika/
 		}
 	}
 	/*First level styles */
-	.main-menu>ul>li span {
+	.main-menu>ul>li span,
+	.main-menu>ul>li{
 		>a {
 			color: #fff;
 			padding: 0 8px 15px 8px;
@@ -585,7 +585,7 @@ a.btn_1,
 		color: $primary;
 		padding: 11px 40px;
 		background: none;
-		&:hover {background: $color-2; color:#fff; border-color:$color-2;}
+		&:hover {background: $primary; color:#fff; border-color:$primary;}
 		&:focus {outline: none;}
 	}
 }
@@ -904,7 +904,16 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
 	overflow: hidden;
 	text-align: center;
 	color: #fff;
-	@include mobile {height: 350px;}
+	@include mobile {
+		height: 350px;
+	}
+	&-image{
+		position: absolute;
+		top: 0;
+		left:0;
+		width: 100%;
+		height: 100%;
+	}
 	&.general {
 		&:before {
 			background: url(../images/hero_in_bg_2.jpg) center center no-repeat; 
@@ -937,7 +946,7 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
 		height: 550px;
 		@include extra-small-mobile {height: 500px;}
 		&:before {
-			background: url(../images/hero_in_tours_detail.jpg) center center no-repeat; 
+			//background: url(../images/hero_in_tours_detail.jpg) center center no-repeat; 
 			@include background-size(cover); 
 		}
 		.wrapper {@include rgba(bg, #000, 0.6);}
@@ -967,9 +976,10 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
 		}
 		.wrapper {@include rgba(bg, #000, 0.6);}
 	}
-	&:before {
+	&:before,
+	&-image {
 		animation: pop-in 5s .3s cubic-bezier(0, 0.5, 0, 1) forwards;
-		content: "";
+		//content: "";
 		opacity: 0;
 		position: absolute;
 		top: 0;
@@ -3245,9 +3255,11 @@ section#reviews {
 		>span {
 			@include fontSize(31px);
 			font-weight: 600;
+			color: $secondary;
 			>small {
 				@include fontSize(11px);
 				font-weight: 500;
+				color: #555;
 			}
 		}
 		.score {
@@ -3308,6 +3320,9 @@ section#reviews {
 }
 
 .booking {
+	br{
+		display: none;
+	}
 	input {
 		font-weight: 500;
 		height: 45px;
@@ -3481,6 +3496,7 @@ img.thumb_visit {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	overflow: hidden;
 }
 .cbp_tmtimeline > li .cbp_tmlabel p{
 	margin-bottom:0;
@@ -4460,7 +4476,7 @@ ul.cart_details{
 		padding: 0;
 		margin: -3px;
 		min-height: 100%;
-		width: 25%;
+		width: 33.33%;
 		background-color: #000;
 		list-style: none;
 		@include tablet {width:50%;}
@@ -4503,7 +4519,7 @@ ul.cart_details{
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				margin-top: -30px;
+				margin-top: -10px;
 				margin-left: -100px;
 				width: 200px;
 				@include transform (translate(0px, 15px));
@@ -4517,7 +4533,7 @@ ul.cart_details{
 				}
 			}
 			i {
-				@include fontSize(30px);
+				@include fontSize(20px);
 			}
 			p {
 				margin-bottom: 0;
@@ -4796,7 +4812,9 @@ a.grid_item_adventure {
 		@include transform (scale(1));
 	}
 }
-
+img{
+	max-width:100%;
+}
 a.grid_item.latest_adventure{
 	h3 {
 			@include fontSize(18px);
@@ -4810,7 +4828,7 @@ a.grid_item.latest_adventure{
 }
 
 .banner{
-	background: url(../images/banner_bg_desktop.jpg) center center no-repeat;
+	//background: url(../images/banner_bg_desktop.jpg) center center no-repeat;
    	@include background-size(cover);
    	width: 100%;
    	height: 420px;
@@ -5652,6 +5670,22 @@ ul.share-buttons {
 				color: #1da1f2;
 				&:hover {background: #1da1f2;color: #fff;}
 			}
+			&.viber {
+				border-color: #665CAC;
+				color: #665CAC;
+				&:hover {background: #665CAC;color: #fff;}
+			}
+			&.whatsapp {
+				border-color: #34B7F1;
+				color: #34B7F1;
+				&:hover {background: #34B7F1;color: #fff;}
+			}
+			&.phone {
+				border-color: $primary;
+				color: $primary;
+				&:hover {background: $primary;color: #fff;}
+			}
+			
 		}
 		i {
 			@include fontSize(16px);
@@ -5978,6 +6012,22 @@ ul.bullets {
 			top: 0;
 		}
 	}
+	&--cross{
+		li{
+			&::before{
+				content: '\51';
+				color: $danger;
+			}
+		}
+	}
+	&--tick{
+		li{
+			&::before{
+				content:'\52' ;
+				color: $color-3;
+			}
+		}
+	}
 }
 
 /*-------- 3.4 Spacing --------*/
@@ -6090,7 +6140,7 @@ ul.bullets {
 	.block-vertical {
 		animation: reveal_top_to_bottom 1s ease-in-out;
 		@include animation-fill (forwards);
-		background: $color-2;
+		background: $primary;
 	}
 }
 
@@ -6965,3 +7015,143 @@ ul.plan-features {
 			display: none;
 		}
 	}
+
+	ul.inquiry-btn {
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		margin: 0 0 25px 0;
+		li {
+			display: inline-block;
+			margin: 0 5px 5px 5px;
+			 a {
+				background: #fff;
+				border: 1px solid #666;
+				border-radius: 50px;
+				font-weight: 500;
+				transition: 0.3s;
+				display: block;
+				width: 35px;
+				height: 35px;
+				line-height:36px;
+				text-align:center;
+				
+				&:hover {color: #fff;}
+				&.viber {
+					border-color: #665CAC;
+					color: #665CAC;
+					&:hover {background: #665CAC;color: #fff;}
+				}
+				&.whatsapp {
+					border-color: #25D366;
+					color: #25D366;
+					&:hover {background: #25D366;color: #fff;}
+				}
+				&.phone {
+					border-color: $primary;
+					color: $primary;
+					&:hover {background: $primary;color: #fff;}
+				}
+				
+			}
+			i {
+				@include fontSize(16px);
+				margin-right: 0;
+			}
+		}
+	}
+
+	.badge-wrap{
+		height: 30px;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 1px;
+			background-color: #ccc;
+		}
+		.badge{
+			width: 30px;
+			height: 30px;
+			border-radius: 50px;
+			border: 1px solid #ccc;
+			line-height: 25px;
+			position: relative;
+			background: $white;
+			margin: 0 auto;
+			display: block;
+			z-index: 2;
+		}
+	}
+	
+.bg-cover{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.widget{
+	position: relative;
+    display: block;
+    margin-bottom: 15px;
+	&-title{
+	    padding: 15px 0;
+	    margin-bottom: 20px;
+	    border-bottom: 1px solid #ededed;
+
+	    h4{
+	    	padding: 0;
+		    margin: 0;
+		    font-weight: 500;
+		    line-height: 1;
+		    font-size: 15px;
+		    font-size: 0.9375rem;
+	    }
+	}
+}
+.comments-list{
+	padding: 0;
+    list-style: none;
+    li{
+		margin-bottom: 10px;
+	    display: table;
+	    width: 100%;
+    }
+    h3{
+		font-size: 14px;
+	    padding: 0 0 0;
+	    margin-bottom: 0;
+	    margin-top: 5px;
+	    text-transform: capitalize;
+	    letter-spacing: 0;
+	    a{
+	    	color: #333;
+	    }
+    }
+}
+.alignleft{
+	 float: left;
+    margin: 0 15px 10px 0;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+
+    img{
+    	    width: auto;
+    height: 80px;
+    }
+}
+
+.inquiry-fomr-content{
+	br{
+		display:none;
+	}
+}

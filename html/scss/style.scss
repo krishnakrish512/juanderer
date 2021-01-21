@@ -81,7 +81,6 @@ Author URI: http://themeforest.net/user/Ansonika/
 			a {
 				position: relative;
 				margin: 0;
-				padding: 0;
 				display: block;
 				padding: 5px 10px;
 				white-space: nowrap;
@@ -89,7 +88,8 @@ Author URI: http://themeforest.net/user/Ansonika/
 		}
 	}
 	/*First level styles */
-	.main-menu>ul>li span {
+	.main-menu>ul>li span,
+	.main-menu>ul>li{
 		>a {
 			color: #fff;
 			padding: 0 8px 15px 8px;
@@ -4812,7 +4812,9 @@ a.grid_item_adventure {
 		@include transform (scale(1));
 	}
 }
-
+img{
+	max-width:100%;
+}
 a.grid_item.latest_adventure{
 	h3 {
 			@include fontSize(18px);
