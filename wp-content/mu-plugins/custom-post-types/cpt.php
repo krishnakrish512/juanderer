@@ -46,12 +46,12 @@ add_post_type( 'Tour', [
     'has_archive' => true,
 ] );
 
-add_post_type( 'Hotel', [
+add_post_type( 'Activitie', [
     'public' => true,
 //    'menu_position' => 5,
     'labels'      => [ 'add_new_item' => "Add new hotel" ],
     'supports' => ['title', 'editor','thumbnail'],
-    'taxonomies'  => [ 'hotel-category' ],
+    'taxonomies'  => [ 'Activities-category' ],
     'has_archive' => true,
 ] );
 
@@ -66,23 +66,23 @@ add_post_type( 'Destination', [
 
 
 $labels = array(
-    'name'                       => _x( 'Hotel Categories', 'taxonomy general name' ),
-    'singular_name'              => _x( 'Hotel Category', 'taxonomy singular name' ),
-    'search_items'               => __( 'Search Hotel Categories' ),
-    'popular_items'              => __( 'Popular Hotel Categories' ),
-    'all_items'                  => __( 'All Hotel Categories' ),
+    'name'                       => _x( 'Activitie Categories', 'taxonomy general name' ),
+    'singular_name'              => _x( 'Activitie Category', 'taxonomy singular name' ),
+    'search_items'               => __( 'Search Activitie Categories' ),
+    'popular_items'              => __( 'Popular Activitie Categories' ),
+    'all_items'                  => __( 'All Activitie Categories' ),
     'parent_item'                => null,
     'parent_item_colon'          => null,
-    'edit_item'                  => __( 'Edit Hotel Category' ),
-    'update_item'                => __( 'Update Hotel Category' ),
-    'add_new_item'               => __( 'Add New Hotel Category' ),
-    'new_item_name'              => __( 'New Hotel Category Name' ),
-    'separate_items_with_commas' => __( 'Separate Hotel categories with commas' ),
-    'add_or_remove_items'        => __( 'Add or remove Hotel categories' ),
-    'choose_from_most_used'      => __( 'Choose from the most used Hotel categories' ),
-    'menu_name'                  => __( ' Hotel Categories' ),
+    'edit_item'                  => __( 'Edit Activitie Category' ),
+    'update_item'                => __( 'Update Activitie Category' ),
+    'add_new_item'               => __( 'Add New Activitie Category' ),
+    'new_item_name'              => __( 'New Activitie Category Name' ),
+    'separate_items_with_commas' => __( 'Separate Activitie categories with commas' ),
+    'add_or_remove_items'        => __( 'Add or remove Activitie categories' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Activitie categories' ),
+    'menu_name'                  => __( ' Activitie Categories' ),
 );
-add_taxonomy( "hotel-category", 'hotel', [
+add_taxonomy( "activities-category", 'activitie', [
 	'labels'       => $labels,
 	'hierarchical' => true
 ] );

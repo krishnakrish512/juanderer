@@ -19,12 +19,12 @@ function my_custom_post_Tours()
 }
 add_action('init', 'my_custom_post_Tours');
 
-function my_custom_post_hotels()
+function my_custom_post_activities()
 {
     $labels = array(
-        'name' => "Hotel",
-        'singular_name' => "Hotel",
-        'menu_name' => 'Hotel'
+        'name' => "Activitie",
+        'singular_name' => "Activitie",
+        'menu_name' => 'Activitie'
     );
     $args = array(
         'labels' => $labels,
@@ -36,8 +36,7 @@ function my_custom_post_hotels()
 //        'taxonomies' => array('category'),
 
     );
-    register_post_type('hotel', $args);
+    register_post_type('activitie', $args);
 }
-
-add_action('init', 'my_custom_post_hotels');
+add_action('init', 'my_custom_post_activities');
 
