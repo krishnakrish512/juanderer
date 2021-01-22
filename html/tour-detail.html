@@ -197,46 +197,115 @@
 							<hr class="m-0">
                             <div class="description-block pt-4 mb-4" id="gallery">
                                 <h3>Gallery</h3>
-                                <div class="grid">
-                                    <ul class="magnific-gallery">
-                                        <li>
-                                            <figure>
-                                                <img src="assets/images/pic_1.jpg" alt="">
-                                                <figcaption>
-                                                    <div class="caption-content">
-                                                        <a href="assets/images/pic_1.jpg" title="" data-effect="mfp-zoom-in">
-                                                            <i class="pe-7s-albums"></i>
-                                                        </a>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-										<li>
+								<div class="isotope-wrapper grid">
+									<ul class="magnific-gallery">
+										<li class="isotope-item">
 											<figure>
-												<img src="assets/images/pic_4.jpg" alt="">
+											   <img src="assets/images/Bali-Indonesia-Tour-3.jpg" alt="">
 												<figcaption>
 													<div class="caption-content">
-														<a href="assets/images/pic_4.jpg" title="" data-effect="mfp-zoom-in">
+														<a href="assets/images/Bali-Indonesia-Tour-3.jpg" title="" data-effect="mfp-zoom-in">
 															<i class="pe-7s-albums"></i>
 														</a>
 													</div>
 												</figcaption>
 											</figure>
 										</li>
-										<li>
+										<li class="isotope-item">
 											<figure>
-												<img src="assets/images/pic_7.jpg" alt="">
+												<img src="assets/images/Bali-Indonesia-Tour-4.jpg" alt="">
 												<figcaption>
 													<div class="caption-content">
-														<a href="assets/images/pic_7.jpg" title="" data-effect="mfp-zoom-in">
+														<a href="assets/images/Bali-Indonesia-Tour-4.jpg" title="" data-effect="mfp-zoom-in">
 															<i class="pe-7s-albums"></i>
 														</a>
 													</div>
 												</figcaption>
 											</figure>
 										</li>
-                                    </ul>
-                                </div>
+										<li class="isotope-item">
+											<figure>
+												<img src="assets/images/pic_1.jpg" alt="">
+												<figcaption>
+													<div class="caption-content">
+														<a href="assets/images/pic_1.jpg" title="" data-effect="mfp-zoom-in">
+															<i class="pe-7s-albums"></i>
+														</a>
+													</div>
+												</figcaption>
+											</figure>
+										</li>
+
+										<li class="isotope-item">
+											<figure>
+												<img src="assets/images/Bali-Indonesia-Tour-2.jpg" alt="">
+												<figcaption>
+													<div class="caption-content">
+														<a href="assets/images/Bali-Indonesia-Tour-2.jpg" title="" data-effect="mfp-zoom-in">
+															<i class="pe-7s-albums"></i>
+														</a>
+													</div>
+												</figcaption>
+											</figure>
+										</li>
+
+										<li class="isotope-item">
+											<figure>
+												<img src="assets/images/Bali-Indonesia-Tour-4.jpg" alt="">
+												<figcaption>
+													<div class="caption-content">
+														<a href="assets/images/Bali-Indonesia-Tour-4.jpg" title="" data-effect="mfp-zoom-in">
+															<i class="pe-7s-albums"></i>
+														</a>
+													</div>
+												</figcaption>
+											</figure>
+										</li>
+
+									</ul>
+								</div>
+
+
+<!--                                <div class="grid">-->
+<!--                                    <ul class="magnific-gallery">-->
+<!--                                        <li>-->
+<!--                                            <figure>-->
+<!--                                                <img src="assets/images/pic_1.jpg" alt="">-->
+<!--                                                <figcaption>-->
+<!--                                                    <div class="caption-content">-->
+<!--                                                        <a href="assets/images/pic_1.jpg" title="" data-effect="mfp-zoom-in">-->
+<!--                                                            <i class="pe-7s-albums"></i>-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </figcaption>-->
+<!--                                            </figure>-->
+<!--                                        </li>-->
+<!--										<li>-->
+<!--											<figure>-->
+<!--												<img src="assets/images/pic_4.jpg" alt="">-->
+<!--												<figcaption>-->
+<!--													<div class="caption-content">-->
+<!--														<a href="assets/images/pic_4.jpg" title="" data-effect="mfp-zoom-in">-->
+<!--															<i class="pe-7s-albums"></i>-->
+<!--														</a>-->
+<!--													</div>-->
+<!--												</figcaption>-->
+<!--											</figure>-->
+<!--										</li>-->
+<!--										<li>-->
+<!--											<figure>-->
+<!--												<img src="assets/images/pic_7.jpg" alt="">-->
+<!--												<figcaption>-->
+<!--													<div class="caption-content">-->
+<!--														<a href="assets/images/pic_7.jpg" title="" data-effect="mfp-zoom-in">-->
+<!--															<i class="pe-7s-albums"></i>-->
+<!--														</a>-->
+<!--													</div>-->
+<!--												</figcaption>-->
+<!--											</figure>-->
+<!--										</li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
 
                             </div>
 							<div class="description-block pt-4 mb-4" id="location">
@@ -420,57 +489,21 @@
 	
 	<!-- COMMON SCRIPTS -->
     <script src="assets/js/common_scripts.js"></script>
+<script defer src="assets/js/jquery.flexslider.js"></script>
     <script src="assets/js/main.js"></script>
 	<script src="assets/js/validate.js"></script>
+<script src="assets/js/isotope.min.js"></script>
 	
 	<!-- Map -->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="assets/js/map_single_tour.js"></script>
 	<script src="assets/js/infobox.js"></script>
-	
-	<!-- DATEPICKER  -->
-	<script>
-	$(function() {
-	  $('input[name="dates"]').daterangepicker({
-		  autoUpdateInput: false,
-		  parentEl:'.scroll-fix',
-		  minDate:new Date(),
-		  opens: 'left',
-		  locale: {
-			  cancelLabel: 'Clear'
-		  }
-	  });
-	  $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-		  $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
-	  });
-	  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
-		  $(this).val('');
-	  });
+<script>
+	$(window).on('load', function(){
+		var $container = $('.isotope-wrapper');
+		$container.isotope({ itemSelector: '.isotope-item', layoutMode: 'masonry' });
 	});
-	</script>
-	
-	<!-- INPUT QUANTITY  -->
-	<script src="assets/js/input_qty.js"></script>
-	
-	<!-- INSTAGRAM FEED  -->
-	<script>
-		$(window).on('load', function() {
-			"use strict";
-			$.instagramFeed({
-				'username': 'thelouvremuseum',
-				'container': "#instagram-feed",
-				'display_profile': false,
-				'display_biography': false,
-				'display_gallery': true,
-				'get_raw_json': false,
-				'callback': null,
-				'styling': true,
-				'items': 12,
-				'items_per_row': 6,
-				'margin': 1
-			});
-		});
-	</script>
+</script>
   
 </body>
 </html>

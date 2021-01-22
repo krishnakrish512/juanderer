@@ -422,7 +422,10 @@
 
 	//input disabled
 	$('input[name="tour"]').attr('disabled', 'disabled');
+	$('input[name="dates"]').attr('autocomplete', 'off');
 
+
+	//Home Carousel
 	$('#carousel_slider').flexslider({
 		animation: "slide",
 		controlNav: false,
@@ -441,6 +444,23 @@
 		start: function(slider) {
 			$('body').removeClass('loading');
 		}
+	});
+
+	//DateRange Picker
+	$('input[name="dates"]').daterangepicker({
+		autoUpdateInput: false,
+		parentEl: '.scroll-fix',
+		minDate: new Date(),
+		opens: 'left',
+		locale: {
+			cancelLabel: 'Clear'
+		}
+	});
+	$('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
+		$(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
+	});
+	$('input[name="dates"]').on('cancel.daterangepicker', function (ev, picker) {
+		$(this).val('');
 	});
 	
 })(window.jQuery); 
