@@ -39,7 +39,7 @@
                             <div class="description-block pt-4 mb-4">
                                 <h2>Description</h2>
                                 <p><?php the_content(); ?></p>
-                                <div class="row">
+                                <div class="row d-none">
                                     <div class="col-lg-6">
                                         <ul class="bullets">
                                             <li>Dolorem mediocritatem</li>

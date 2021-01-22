@@ -13,8 +13,8 @@
                 <?php if (get_field('tour_gallery')): ?>
                     <span class="magnific-gallery">
                     <?php $images = get_field('tour_gallery');
-//                    var_dump($image);
-//                    exit();
+                    //                    var_dump($image);
+                    //                    exit();
                     foreach ($images as $image):
                         ?>
                         <a href="<?= $image; ?>" class="btn_photos" title="Photo title"
@@ -68,7 +68,7 @@
                                         ?>
                                         <li>
                                             <time class="cbp_tmtime mt-2"><span
-                                                        class="d-none">30 min.</span><span>Day</span>
+                                                    class="d-none">30 min.</span><span>Day</span>
                                             </time>
                                             <div class="cbp_tmicon ">
                                                 <?php

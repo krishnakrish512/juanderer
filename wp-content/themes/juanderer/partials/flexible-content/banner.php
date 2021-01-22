@@ -30,7 +30,7 @@
                             <img src="<?= $image; ?>" alt="">
                             <div class="caption">
                                 <h3><?php the_sub_field('title'); ?></h3>
-                                <small>$<?php the_sub_field('price'); ?>/person</small>
+<!--                                <small>$--><?php //the_sub_field('price'); ?><!--/person</small>-->
                             </div>
                         </li>
                     <?php endwhile; ?>
