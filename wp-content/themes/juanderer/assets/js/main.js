@@ -280,6 +280,14 @@
 		}
 	});
 
+	$('#testimonials').owlCarousel({
+		center: false,
+		items: 1,
+		loop: true,
+	});
+
+
+
 	// Sticky filters
 	$(window).bind('load resize', function () {
 		var width = $(window).width();
