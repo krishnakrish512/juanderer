@@ -1770,6 +1770,9 @@ a#moveDown{
 		}
 	}
 }
+.text-primary{
+	color: $primary !important;
+}
 video {
 	position: absolute;
 	top: 0;
@@ -7182,3 +7185,68 @@ ul.plan-features {
 		display:none;
 	}
 }
+
+
+.testimonial {
+	.box_1{
+		overflow: hidden;
+		padding: 30px;
+	}
+	.auther-text{
+		padding-left: 50px;
+
+		.icon-quote-left{
+			position: absolute;
+			font-size: 30px;
+			color: #f15a29;
+			opacity: 0.4;
+			top: -10px;
+			left: 0;
+		}
+	}
+	.auther-info{
+		padding-left: 50px;
+	}
+	.owl-dots{
+		text-align: left;
+		float: left;
+		margin-left: 50px;
+		margin-bottom: 0;
+	}
+	a{
+		float: right;
+		display:block;
+		margin-top:7px;
+	}
+
+}
+.auther-grid{
+	&-header{
+		h5 span{
+			font-size: 14px;
+		}
+	}
+}
+.links{
+	position: relative;
+	padding-bottom: 5px;
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		background-color: $primary;
+		width: 0;
+
+		transition: all 0.25s ease-in-out;
+
+	}
+	&:hover{
+		color: $primary;
+		&::after{
+			width: 100%;
+		}
+	}
+}
+
