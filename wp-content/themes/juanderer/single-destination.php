@@ -87,7 +87,10 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="inquiry-form.html" class="btn_1 outline">Inquiry Now</a>
+                            <div class="text-center">
+                                <a href="inquiry-form.html" class="btn_1 outline btn-lg">Inquiry Now</a>
+                            </div>
+
 
                             <!-- End Map -->
                         </section>

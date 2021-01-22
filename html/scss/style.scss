@@ -4476,81 +4476,93 @@ ul.cart_details{
 }
 
 /*-------- 2.10 Media Gallery --------*/
-.grid ul {
-	margin: 0 0 25px 0;
-	padding: 0;
-	width: 100%;
-	text-align: center;
-	li {
-		display: inline-block;
-		margin: 0;
+.grid {
+	ul{
+		margin: 0 0 25px 0;
 		padding: 0;
-		margin: -3px;
-		min-height: 100%;
-		width: 33.33%;
-		background-color: #000;
-		list-style: none;
-		@include tablet {width:50%;}
-		@include mobile {width:100%;min-height:100%;float:none;}
-		figure {
-			position: relative;
-			overflow: hidden;
+		width: 100%;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
 			margin: -3px;
-			img {
-				width: 100%;
-				height: 100%;
-				@include transition-default;
-			}
-			&:hover img,
-			&:focus img {
-				 @include transform (scale(1.1));
-			}
-			&:hover figcaption,
-			&:focus figcaption {
-				opacity: 1;
-			}
-			&:hover figcaption .caption-content,
-			&:focus figcaption .caption-content {
-				@include transform (translate(0px, 0px));
-			}
-		}
-		figcaption {
-			position: absolute;
-			top: 0;
-			left: 0;
-			padding: 15% 0;
-			width: 100%;
-			height: 100%;
-			@include rgba(bg, #000, 0.6);
-			text-align: center;
-			@include fontSize(14px);
-			opacity: 0;
-			@include transition-default;
-			.caption-content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				margin-top: -10px;
-				margin-left: -100px;
-				width: 200px;
-				@include transform (translate(0px, 15px));
-				@include transition-default;
-			}
-			a {
-				color: #fff;
-				&:hover,
-				&:focus {
-					color: $primary;
+			min-height: 100%;
+			width: 33.33%;
+			background-color: #000;
+			list-style: none;
+			@include tablet {width:50%;}
+			@include mobile {width:100%;min-height:100%;float:none;}
+			figure {
+				position: relative;
+				overflow: hidden;
+				margin: -3px;
+				img {
+					width: 100%;
+					height: 100%;
+					@include transition-default;
+				}
+				&:hover img,
+				&:focus img {
+					@include transform (scale(1.1));
+				}
+				&:hover figcaption,
+				&:focus figcaption {
+					opacity: 1;
+				}
+				&:hover figcaption .caption-content,
+				&:focus figcaption .caption-content {
+					@include transform (translate(0px, 0px));
 				}
 			}
-			i {
-				@include fontSize(20px);
+			figcaption {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 15% 0;
+				width: 100%;
+				height: 100%;
+				@include rgba(bg, #000, 0.6);
+				text-align: center;
+				@include fontSize(14px);
+				opacity: 0;
+				@include transition-default;
+				.caption-content {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-top: -10px;
+					margin-left: -100px;
+					width: 200px;
+					@include transform (translate(0px, 15px));
+					@include transition-default;
+				}
+				a {
+					color: #fff;
+					&:hover,
+					&:focus {
+						color: $primary;
+					}
+				}
+				i {
+					@include fontSize(20px);
+				}
+				p {
+					margin-bottom: 0;
+					margin-top: 10px;
+					text-transform: uppercase;
+					font-weight: 400;
+				}
 			}
-			p {
-				margin-bottom: 0;
-				margin-top: 10px;
-				text-transform: uppercase;
-				font-weight: 400;
+		}
+	}
+	&.isotope-wrapper{
+		ul{
+			li{
+				margin: 0;
+				min-height: auto;
+				figure{
+					margin: 0;		}
 			}
 		}
 	}
