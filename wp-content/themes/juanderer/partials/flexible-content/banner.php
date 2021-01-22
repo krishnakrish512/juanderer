@@ -9,9 +9,11 @@
 //                    exit();
                     ?>
                     <li>
+                        <h3><?php the_sub_field('title'); ?></h3>
                         <img src="<?= $image ?>" alt="">
                         <div class="meta">
-                            <h3><?php the_sub_field('title'); ?></h3>
+                            <h3><?php the_sub_field('sub_title'); ?></h3>
+
                             <a href="<?php the_sub_field('link'); ?>" class="btn_1">Read more</a>
                         </div>
                     </li>
@@ -24,13 +26,14 @@
                 <ul class="slides">
                     <?php while (have_rows('banner_repeater')):
                         the_row();
-                        $image = get_sub_field('image_url','category-thumb')
+                        $image = get_sub_field('image_url', 'category-thumb')
                         ?>
                         <li>
                             <img src="<?= $image; ?>" alt="">
                             <div class="caption">
                                 <h3><?php the_sub_field('title'); ?></h3>
-<!--                                <small>$--><?php //the_sub_field('price'); ?><!--/person</small>-->
+                                <!--                                <small>$--><?php //the_sub_field('price');
+                                ?><!--/person</small>-->
                             </div>
                         </li>
                     <?php endwhile; ?>

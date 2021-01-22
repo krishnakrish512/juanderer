@@ -22,12 +22,12 @@
                                 <figure>
                                     <!--                                <a href="#0" class="wish_bt"></a>-->
                                     <a href="<?php the_permalink(); ?>"><img
-                                            src="<?php the_post_thumbnail('category-thumb'); ?>"
+                                            src="<?php the_post_thumbnail('thumb-crazy'); ?>"
                                             class="img-fluid" alt="" width="800"
                                             height="533">
                                         <div class="read_more"><span>Read more</span></div>
                                     </a>
-                                    <small><?php $terms = get_the_terms($post->ID, 'tour-category');
+                                    <small><?php $terms = get_the_terms($post->ID, 'activities-category');
                                         foreach ($terms as $term) {
                                             echo $term_name = $term->name;
                                         }

@@ -3,7 +3,7 @@
 //    'orderby' => 'date',
 //    'order' => 'DESC',
 //    'post_status' => 'publish',
-    'posts_per_page' => 3,
+    'posts_per_page' => 6,
     'meta_key' => 'feature_tour',
     'meta_value' => 1
 ];
