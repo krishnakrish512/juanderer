@@ -13,8 +13,8 @@
                 <?php if (get_field('tour_gallery')): ?>
                     <span class="magnific-gallery">
                     <?php $images = get_field('tour_gallery');
-//                    var_dump($image);
-//                    exit();
+                    //                    var_dump($image);
+                    //                    exit();
                     foreach ($images as $image):
                         ?>
                         <a href="<?= $image; ?>" class="btn_photos" title="Photo title"
@@ -127,12 +127,12 @@
                             <?php if (get_field('tour_gallery')): ?>
                                 <div class="description-block pt-4 mb-4" id="gallery">
                                     <h3>Gallery</h3>
-                                    <div class="grid">
+                                    <div class="isotope-wrapper grid">
                                         <ul class="magnific-gallery">
                                             <?php $images = get_field('tour_gallery');
                                             foreach ($images as $image):
                                                 ?>
-                                                <li>
+                                                <li class="isotope-item">
                                                     <figure>
                                                         <img src="<?= $image ?>" alt="">
                                                         <figcaption>

@@ -18,11 +18,15 @@
                     ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="box_grid">
-                            <?php if (has_post_thumbnail()): ?>
+                            <?php if (has_post_thumbnail()):
+                                $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb');
+//                            var_dump($image);
+//                            exit();
+                                ?>
                                 <figure>
                                     <!--                                <a href="#0" class="wish_bt"></a>-->
                                     <a href="<?php the_permalink(); ?>"><img
-                                                src="<?php the_post_thumbnail('category-thumb'); ?>"
+                                                src="<?= $image; ?>"
                                                 class="img-fluid" alt="" width="800"
                                                 height="533">
                                         <div class="read_more"><span>Read more</span></div>
@@ -53,27 +57,7 @@
     </div>
     <!-- /container -->
 
-    <div class="bg_color_1">
-        <div class="container margin_60_35">
-            <div class="row">
-                <?php while (have_rows('content_field', 'option')):
-                    the_row();
-                    ?>
-                    <div class="col-md-4">
-                        <a href="<?php the_sub_field('link'); ?>" class="boxed_list">
-                            <i class="<?php the_sub_field('icons'); ?>"></i>
-                            <h4><?php the_sub_field('title'); ?></h4>
-                            <p><?php the_sub_field('paragraph'); ?></p>
-                        </a>
-                    </div>
-                <?php endwhile; ?>
-            </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-    </div>
-    <!-- /bg_color_1 -->
-
+    <?php get_template_part('/partials/single-product/content_list'); ?>
 </main>
 <!--/main-->
 <?php get_footer(); ?>

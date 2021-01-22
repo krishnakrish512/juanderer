@@ -48,7 +48,7 @@
         </div>
         <!-- /wrapper-grid -->
 
-        <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
+<!--        <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>-->
 
     </div>
     <!-- /container -->
