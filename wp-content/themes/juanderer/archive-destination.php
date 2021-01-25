@@ -19,7 +19,11 @@
                     ?>
                     <div class="col-lg-6">
                         <a class="box_news" href="<?php the_permalink(); ?>">
-                            <figure><img src="<?php the_post_thumbnail('category-thumb'); ?>" alt="">
+                            <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'category-thumb');
+                            //                            var_dump($image);
+                            //                            exit();
+                            ?>
+                            <figure><img src="<?= $image; ?>" alt="<?= esc_attr(get_the_title()) ?>">
                             </figure>
                             <h4><?php the_title(); ?></h4>
                             <p><?= get_field('intro_text'); ?></p>

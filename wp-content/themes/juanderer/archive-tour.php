@@ -18,17 +18,14 @@
                     ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="box_grid">
-                            <?php if (has_post_thumbnail()):
-                                $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb');
-//                            var_dump($image);
-//                            exit();
-                                ?>
+                            <?php if (has_post_thumbnail()): ?>
                                 <figure>
+                                    <?php $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb'); ?>
                                     <!--                                <a href="#0" class="wish_bt"></a>-->
-                                    <a href="<?php the_permalink(); ?>"><img
-                                                src="<?= $image; ?>"
-                                                class="img-fluid" alt="" width="800"
-                                                height="533">
+                                    <a href="<?php the_permalink(); ?>"><img src="<?= $image; ?>"
+                                        <!--                                                class="img-fluid" alt="-->
+                                        <? //= esc_attr(get_the_title()) ?><!--" width="800"-->
+                                        <!--                                                height="533">-->
                                         <div class="read_more"><span>Read more</span></div>
                                     </a>
                                     <small><?php $terms = get_the_terms($post->ID, 'tour-category');

@@ -28,23 +28,36 @@ if (($_GET['tour_id'])) {
                         <?php echo do_shortcode("[contact-form-7 id='" . $form . "']") ?>
                     </section>
                 </div>
-                <!-- /col -->
-                <aside class="col-lg-4" id="sidebar">
-                    <div class="box_detail booking">
-                        <div class="price d-flex justify-content-between align-items-center">
-                            <p class="mb-0"><?php the_field('days_night', $tour_id) ?> </p>
-                            <span>$<?php the_field('price', $tour_id); ?>/<small>person</small></span>
 
+                <aside class="col-lg-3">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Packages you may like</h4>
                         </div>
-<!--                        <p>--><?php //echo get_post_field('post_content', $tour_id); ?><!--</p>-->
-                        <div class="badge-wrap"><span class="badge">Or</span></div>
+                        <ul class="comments-list">
+                            <li>
+                                <div class="alignleft">
+                                    <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
+                                </div>
 
-                        <div class="inquiry-by mt-3 d-flex align-items-center justify-content-between">
-                            <?php get_template_part('/partials/single-product/enquiery_share'); ?>
-                        </div>
-
+                                <h3><a href="#" title="">Verear qualisque ex minimum...</a></h3>
+                            </li>
+                            <li>
+                                <div class="alignleft">
+                                    <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
+                                </div>
+                                <h3><a href="#" title="">Verear qualisque ex minimum...</a></h3>
+                            </li>
+                            <li>
+                                <div class="alignleft">
+                                    <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
+                                </div>
+                                <h3><a href="#" title="">Verear qualisque ex minimum...</a></h3>
+                            </li>
+                        </ul>
                     </div>
                 </aside>
+
             </div>
             <!-- /row -->
         </div>
@@ -56,8 +69,6 @@ if (($_GET['tour_id'])) {
 
 <script>
     jQuery('[name="tour"]').val('<?= $tour_name; ?>');
-
-
 
 </script>
 
