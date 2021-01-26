@@ -470,6 +470,10 @@
 	$('input[name="dates"]').on('cancel.daterangepicker', function (ev, picker) {
 		$(this).val('');
 	});
+
+
+		var $container = $('.isotope-wrapper');
+		$container.isotope({ itemSelector: '.isotope-item', layoutMode: 'masonry' });
 	
 })(window.jQuery); 
 

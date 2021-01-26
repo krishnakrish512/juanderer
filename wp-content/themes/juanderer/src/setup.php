@@ -26,6 +26,7 @@ function juanderer_scripts() {
     wp_enqueue_script( 'validate-script', get_template_directory_uri() . '/assets/js/validate.js', [], '1.0', true );
     wp_enqueue_script( 'flexslider-script', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', [], '1.0', true );
     wp_enqueue_script( 'daterangepicker', get_template_directory_uri() . '/assets/js/daterangepicker.js', [], '1.0', true );
+    wp_enqueue_script( 'isotope', get_template_directory_uri() . '/assets/js/isotope.min.js', [], '1.0', true );
     wp_enqueue_script( 'input_qty', get_template_directory_uri() . '/assets/js/input_qty.js', [], '1.0', true );
     wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/main.js', [], '1.0', true );
 //    wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', [], '1.0', true );
