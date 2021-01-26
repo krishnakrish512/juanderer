@@ -88,14 +88,12 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a href="inquiry-form.html" class="btn_1 outline btn-lg">Inquiry Now</a>
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?destination_id=" . get_the_ID()); ?>"
+                                   class="btn_1 outline btn-lg">Inquiry Now</a>
                             </div>
-
-
                             <!-- End Map -->
                         </section>
                         <!-- /section -->
-
                     </div>
                     <!-- /col -->
                 </div>

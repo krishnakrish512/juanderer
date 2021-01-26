@@ -20,12 +20,12 @@
             <div class="col-lg-3 col-md-6 ml-lg-auto">
                 <h5>Useful links</h5>
                 <ul class="links">
-                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_title('About us'))); ?>">About</a>
+                    <li><a href="">About</a>
                     </li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="register.html">Register</a></li>
                     <li><a href="blog.html">News &amp; Events</a></li>
-                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_title('contact us'))); ?>">Contacts</a>
+                    <li><a href="">Contacts</a>
                     </li>
                 </ul>
             </div>

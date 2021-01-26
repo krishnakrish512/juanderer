@@ -20,8 +20,9 @@
             foreach ($destinations as $destination):
                 ?>
                 <div class="col-lg-6">
+                    <?php $image = get_the_post_thumbnail_url($destination->ID, 'category-thumb'); ?>
                     <a class="box_news" href="<?= get_the_permalink($destination->ID); ?>">
-                        <figure><img src="<?= get_the_post_thumbnail($destination->ID, 'category-thumb'); ?>" alt="">
+                        <figure><img src="<?=$image; ?>" alt="<?= esc_attr(get_the_title()) ?>">
 
                         </figure>
 
@@ -33,7 +34,8 @@
             <!-- /box_news -->
         </div>
         <!-- /row -->
-        <p class="btn_home_align"><a href="<?php the_sub_field('link');?>" class="btn_1 rounded">View all Destination</a></p>
+        <p class="btn_home_align"><a href="<?php the_sub_field('link'); ?>" class="btn_1 rounded">View all
+                Destination</a></p>
     </div>
     <!-- /container -->
 </div>

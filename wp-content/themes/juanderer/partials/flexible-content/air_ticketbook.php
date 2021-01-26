@@ -10,7 +10,8 @@
         <h3><?php the_sub_field('title'); ?></h3>
 
         <p><?php the_sub_field('description'); ?></p>
-        <a href="<?php the_sub_field('inquiry_url'); ?>" class="btn_1">Inquiry</a>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?airticket_id=" . get_the_ID()); ?>"
+           class="btn_1">Inquiry</a>
     </div>
 </div>
 

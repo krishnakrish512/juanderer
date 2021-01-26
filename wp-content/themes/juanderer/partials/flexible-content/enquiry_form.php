@@ -5,6 +5,19 @@ if (($_GET['tour_id'])) {
 //        var_dump($tour_name);
 //        exit();
 }
+if (($_GET['destination_id'])) {
+    $destination_id = $_GET['destination_id'];
+    $destination_name = get_the_title($destination_id);
+//        var_dump($destination_name);
+//        exit();
+}
+if (($_GET['airticket_id'])) {
+    $air_id = $_GET['airticket_id'];
+    $air_name = get_the_title($air_id);
+//        var_dump($air_name);
+//        exit();
+}
+
 ?>
 <main>
     <section class="hero_in tours_detail">
@@ -68,7 +81,7 @@ if (($_GET['tour_id'])) {
 <!--/main-->
 
 <script>
-    jQuery('[name="tour"]').val('<?= $tour_name; ?>');
+    jQuery('[name="tour"]').val('<?= $tour_name, $destination_name, $air_name; ?>');
 
 </script>
 
