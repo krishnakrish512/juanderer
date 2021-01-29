@@ -24,7 +24,7 @@
                         <?php endwhile; ?>
 
                     </div>
-                    <a href="<?php the_sub_field('link'); ?>" class="links">Read more</a>
+                    <a href="<?php the_sub_field('link'); ?>" class="link-arrow">Read more</a>
                 </div>
             </div>
         </div>
