@@ -50,6 +50,7 @@ if (($_GET['airticket_id'])) {
                         <ul class="comments-list">
                             <li>
                                 <div class="alignleft">
+
                                     <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
                                 </div>
 
