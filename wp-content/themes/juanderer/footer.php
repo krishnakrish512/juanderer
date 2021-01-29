@@ -17,16 +17,22 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 ml-lg-auto">
-                <h5>Useful links</h5>
+            <div class="col-lg-3 col-md-6 ml-lg-auto d-none">
+                <h5>popular tour</h5>
                 <ul class="links">
-                    <li><a href="">About</a>
-                    </li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="blog.html">News &amp; Events</a></li>
-                    <li><a href="">Contacts</a>
-                    </li>
+                    <?php
+                    global $post;
+                    $post_args = array(
+                        'post_type' => 'tour',
+                        'post_status' => 'publish'
+                    );
+                    $posts = get_posts($post_args);
+                    foreach ($posts as $post) {
+                        ?>
+                        <li><a href="<?php the_permalink($post->ID); ?>"><?php the_title($post->Name); ?>
+                        </li><?php
+                    }
+                    ?>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">

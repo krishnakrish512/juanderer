@@ -33,7 +33,7 @@
                 <!-- /box_news -->
             </div>
             <!-- /row -->
-            <p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">View all news</a></p>
+<!--            <p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">View all news</a></p>-->
         </div>
         <!-- /container -->
     </div>

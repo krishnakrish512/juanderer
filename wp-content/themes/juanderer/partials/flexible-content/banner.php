@@ -14,7 +14,7 @@
                         <div class="meta">
                             <h3><?php the_sub_field('sub_title'); ?></h3>
 
-                            <a href="<?php the_sub_field('link'); ?>" class="btn_1">Read more</a>
+                            <a href="<?php the_sub_field('link'); ?>" class="btn_1">Plan your tour now</a>
                         </div>
                     </li>
                 <?php endwhile; ?>

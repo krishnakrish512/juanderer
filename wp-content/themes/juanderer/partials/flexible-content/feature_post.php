@@ -40,7 +40,13 @@ $tours = get_posts($args);
                             <h3><a href="<?= get_the_permalink($tour->ID); ?>"><?= get_the_title($tour->ID); ?></a>
                             </h3>
                             <p><?= get_field('intro_text', $tour->ID); ?></p>
-                            <span class="price">From <strong>$<?= get_field('price', $tour->ID); ?><small>/person</small></strong> </span>
+                            <?php if (get_field('price', $tour->ID)): ?>
+                                <span class="price">From <strong>$<?= get_field('price', $tour->ID); ?><small>/person</small></strong> </span>
+                            <?php endif; ?>
+                            <?php if (!get_field('price', $tour->ID)): ?>
+                                <a href="<?php the_permalink($tour->ID); ?>"
+                                <h1>Get A Quote Now</h1></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

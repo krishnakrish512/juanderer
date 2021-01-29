@@ -41,37 +41,29 @@ if (($_GET['airticket_id'])) {
                         <?php echo do_shortcode("[contact-form-7 id='" . $form . "']") ?>
                     </section>
                 </div>
-
                 <aside class="col-lg-3">
                     <div class="widget">
                         <div class="widget-title">
                             <h4>Packages you may like</h4>
                         </div>
                         <ul class="comments-list">
-                            <li>
-                                <div class="alignleft">
-
-                                    <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
-                                </div>
-
-                                <h3><a href="#" title="">Verear qualisque ex minimum...</a></h3>
-                            </li>
-                            <li>
-                                <div class="alignleft">
-                                    <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
-                                </div>
-                                <h3><a href="#" title="">Verear qualisque ex minimum...</a></h3>
-                            </li>
-                            <li>
-                                <div class="alignleft">
-                                    <a href="#0"><img src="assets/images/blog-1.jpg" alt=""></a>
-                                </div>
-                                <h3><a href="#" title="">Verear qualisque ex minimum...</a></h3>
-                            </li>
+                            <?php while (have_rows('packages_repeater')):
+                                the_row();
+                                $image = get_sub_field('image_url');
+//                                var_dump($image);
+//                                exit();
+                                ?>
+                                <li>
+                                    <div class="alignleft">
+                                        <a href="<?php the_sub_field('link');?>"><img src="<?= $image; ?>" alt=""></a>
+                                    </div>
+                                    <h3><a href="<?php the_sub_field('link');?>"
+                                           title=""><?php the_sub_field('title'); ?></a></h3>
+                                </li>
+                            <?php endwhile; ?>
                         </ul>
                     </div>
                 </aside>
-
             </div>
             <!-- /row -->
         </div>
