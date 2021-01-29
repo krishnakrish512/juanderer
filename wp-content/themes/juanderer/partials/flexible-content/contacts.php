@@ -34,12 +34,15 @@
         </div>
     </div>
     <!--/contact_info-->
-
     <div class="bg_color_1">
         <div class="container margin_80_55">
             <div class="row justify-content-between">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="map_contact">
+                        <?php
+                        $map_iframe = get_sub_field('map');
+                        echo $map_iframe;
+                        ?>
                     </div>
                     <!-- /map -->
                 </div>

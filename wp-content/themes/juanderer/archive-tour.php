@@ -20,7 +20,7 @@
                         <div class="box_grid">
                             <?php if (has_post_thumbnail()): ?>
                                 <figure>
-                                    <?php $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb'); ?>
+                                    <?php $image = get_the_post_thumbnail(get_the_ID(), 'thumb-crazy'); ?>
                                     <!--                                <a href="#0" class="wish_bt"></a>-->
                                     <a href="<?php the_permalink(); ?>"><img src="<?= $image; ?>"
                                         <!--                                                class="img-fluid" alt="-->
@@ -38,7 +38,13 @@
                             <div class="wrapper">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php the_field('intro_text'); ?></p>
-                                <span class="price">From <strong>$<?php the_field('price'); ?><small>/person</small></strong> </span>
+                                <?php if (get_field('price')): ?>
+                                    <span class="price">From <strong>$<?php the_field('price'); ?><small>/person</small></strong> </span>
+                                <?php endif; ?>
+                                <?php if (!get_field('price')): ?>
+                                    <a href="<?php the_permalink(); ?>"
+                                    <h1>Get A Quote Now</h1></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

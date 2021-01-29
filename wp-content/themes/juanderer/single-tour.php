@@ -163,7 +163,9 @@
                         <div class="box_detail booking">
                             <div class="price d-flex justify-content-between align-items-center">
                                 <p class="mb-0"><?php the_field('days_night'); ?> </p>
-                                <span>$<?php the_field('price'); ?><small>/person</small> </span>
+                                <?php if (get_field('price')): ?>
+                                    <span>$<?php the_field('price'); ?><small>/person</small> </span>
+                                <?php endif; ?>
                             </div>
                             <p>You can make an inquiry to know further detail about the trip. We will be happy to take
                                 care of your inquiry.</p>

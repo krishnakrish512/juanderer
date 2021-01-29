@@ -1,9 +1,13 @@
 <?php get_header(); ?>
 <main>
     <section class="hero_in tours_detail">
+<!--        --><?php //$image = get_field('activities_image', 'option');
+        $term = get_queried_object();
+        $image = get_field('image_url', $term);
+        ?>
+
         <div class="hero_in-image bg-cover"
-            <?php $image = get_field('activities_image', 'option'); ?>
-             style="background-image: url('<?= $image; ?>');"></div>
+             style="background-image:url('<?= $image ?>');"></div>
         <div class="wrapper">
             <div class="container">
                 <h1 class="fadeInUp"><span></span><?php the_field('activities_title', 'option') ?></h1>
@@ -24,8 +28,9 @@
                                     <!--                                <a href="#0" class="wish_bt"></a>-->
                                     <a href="<?php the_permalink(); ?>"><img
                                                 src="<?= $image; ?>"
-<!--                                                class="img-fluid" alt="--><?//= esc_attr(get_the_title()) ?><!--" width="800"-->
-<!--                                                height="533">-->
+                                        <!--                                                class="img-fluid" alt="-->
+                                        <? //= esc_attr(get_the_title()) ?><!--" width="800"-->
+                                        <!--                                                height="533">-->
                                         <div class="read_more"><span>Read more</span></div>
                                     </a>
                                     <small><?php $terms = get_the_terms($post->ID, 'activities-category');
@@ -38,7 +43,13 @@
                             <div class="wrapper">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php the_field('intro_text'); ?></p>
-                                <span class="price">From <strong>$<?php the_field('price'); ?><small>/person</small></strong> </span>
+                                <?php if (get_field('price')): ?>
+                                    <span class="price">From <strong>$<?php the_field('price'); ?><small>/person</small></strong> </span>
+                                <?php endif; ?>
+                                <?php if (!get_field('price')): ?>
+                                    <a href="<?php the_permalink(); ?>"
+                                    <h1>Get A Quote Now</h1></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

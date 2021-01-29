@@ -9,7 +9,7 @@
                     <h3 class="mb-4">Customers' Review</h3>
                     <div class="owl-carousel owl-theme" id="testimonials">
                         <?php while (have_rows('testimonial_repeater')):
-                            the_row()
+                            the_row();
                             ?>
                             <div class="item text-white">
                                 <div class="auther-text">
@@ -22,6 +22,7 @@
                                 </div>
                             </div>
                         <?php endwhile; ?>
+
                     </div>
                     <a href="<?php the_sub_field('link'); ?>" class="links">Read more</a>
                 </div>

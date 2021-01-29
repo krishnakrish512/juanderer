@@ -9,12 +9,12 @@
             <?php
             $args = [
                 'post_type' => 'destination',
-//    'orderby' => 'date',
-//    'order' => 'DESC',
-//    'post_status' => 'publish',
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'post_status' => 'publish',
                 'posts_per_page' => 2,
-                'meta_key' => 'feature_destination',
-                'meta_value' => 1
+//                'meta_key' => 'feature_destination',
+//                'meta_value' => 1
             ];
             $destinations = get_posts($args);
             foreach ($destinations as $destination):
@@ -22,7 +22,7 @@
                 <div class="col-lg-6">
                     <?php $image = get_the_post_thumbnail_url($destination->ID, 'category-thumb'); ?>
                     <a class="box_news" href="<?= get_the_permalink($destination->ID); ?>">
-                        <figure><img src="<?=$image; ?>" alt="<?= esc_attr(get_the_title()) ?>">
+                        <figure><img src="<?= $image; ?>" alt="<?= esc_attr(get_the_title()) ?>">
 
                         </figure>
 

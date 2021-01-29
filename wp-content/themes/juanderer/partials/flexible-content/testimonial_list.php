@@ -12,7 +12,6 @@
     <!--/hero_in-->
 
     <div class="container margin_60_35">
-
         <div class="isotope-wrapper">
             <div class="row">
                 <?php while (have_rows('testimonial_list_repeater')):
@@ -35,7 +34,7 @@
             </div>
         </div>
 
-        <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
+<!--        <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>-->
 
     </div>
     <!-- /container -->
