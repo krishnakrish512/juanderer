@@ -8,16 +8,17 @@
                 <div class="box_1">
                     <h3 class="mb-4">Customers' Review</h3>
                     <div class="owl-carousel owl-theme" id="testimonials">
+
                         <?php while (have_rows('testimonial_repeater')):
                             the_row();
                             ?>
                             <div class="item text-white">
                                 <div class="auther-text">
                                     <span class="icon-quote-left"></span>
-                                    <p><?php the_sub_field('description'); ?></p>
+                                    <p><?php the_sub_field('description', $post); ?></p>
                                 </div>
                                 <div class="auther-info">
-                                    <h6 class="text-white"><?php the_sub_field('author_name'); ?></h6>
+                                    <h6 class="text-white"><?php the_sub_field('author_name', $post); ?></h6>
                                     <span class="text-secondary"><?php the_sub_field('author_title'); ?></span>
                                 </div>
                             </div>

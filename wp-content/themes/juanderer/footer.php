@@ -17,29 +17,21 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 ml-lg-auto d-none">
-                <h5>popular tour</h5>
-                <ul class="links">
-                    <?php
-                    global $post;
-                    $post_args = array(
-                        'post_type' => 'tour',
-                        'post_status' => 'publish'
-                    );
-                    $posts = get_posts($post_args);
-                    foreach ($posts as $post) {
-                        ?>
-                        <li><a href="<?php the_permalink($post->ID); ?>"><?php the_title($post->Name); ?>
-                        </li><?php
-                    }
-                    ?>
+            <div class="col-lg-3 col-md-6">
+                <h5>Thailand Address:</h5>
+                <ul class="contacts">
+                    <li><?= $contact['thailand_address']?></li>
+                    <li><a href="tel://+6696 704 6245"><i class="ti-mobile"></i> <?= $contact['thailand_number'] ?></a>
+                    </li>
+                    <li><a href="mailto:info@juanderertravels.com"><i class="ti-email"></i> <?= $contact['email'] ?></a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5>Contact with Us</h5>
+                <h5>Head Office(Philippines):</h5>
                 <ul class="contacts">
-                    <li><a href="tel://61280932400"><i class="ti-mobile"></i> <?= $contact['phone_number'] ?></a></li>
-                    <li><a href="mailto:info@Panagea.com"><i class="ti-email"></i> <?= $contact['email'] ?></a></li>
+                    <li><?= $contact['head_office_address']?></li>
+                    <li><a href="tel://+63 297 2612"><i class="ti-mobile"></i> <?= $contact['head_office_number'] ?></a></li>
+                    <li><a href="mailto:info@juanderertravels.com"><i class="ti-email"></i> <?= $contact['email'] ?></a></li>
                 </ul>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
     <section class="hero_in tours_detail">
-<!--        --><?php //$image = get_field('activities_image', 'option');
+        <!--        --><?php //$image = get_field('activities_image', 'option');
         $term = get_queried_object();
         $image = get_field('image_url', $term);
         ?>
@@ -25,12 +25,7 @@
                             <?php if (has_post_thumbnail()): ?>
                                 <figure>
                                     <?php $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb'); ?>
-                                    <!--                                <a href="#0" class="wish_bt"></a>-->
-                                    <a href="<?php the_permalink(); ?>"><img
-                                                src="<?= $image; ?>"
-                                        <!--                                                class="img-fluid" alt="-->
-                                        <? //= esc_attr(get_the_title()) ?><!--" width="800"-->
-                                        <!--                                                height="533">-->
+                                    <a href="<?php the_permalink(); ?>"><?= $image; ?>
                                         <div class="read_more"><span>Read more</span></div>
                                     </a>
                                     <small><?php $terms = get_the_terms($post->ID, 'activities-category');
@@ -65,7 +60,7 @@
     </div>
     <!-- /container -->
 
-    <?php get_template_part('/partials/single-product/content_list'); ?>
+    <!--    --><?php //get_template_part('/partials/single-product/content_list'); ?>
 </main>
 <!--/main-->
 <?php get_footer(); ?>

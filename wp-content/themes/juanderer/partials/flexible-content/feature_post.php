@@ -24,10 +24,7 @@ $tours = get_posts($args);
                     <div class="box_grid">
                         <figure>
                             <?php $image = get_the_post_thumbnail($tour->ID, 'category-thumb'); ?>
-                            <a href="<?= get_the_permalink($tour->ID); ?>"><img
-                                        src="<?= $image ?>"
-                                <!--                                            class="img-fluid" alt=""-->
-                                <!--                                            width="800" height="533">-->
+                            <a href="<?= get_the_permalink($tour->ID); ?>"><?= $image; ?>
                                 <div class="read_more"><span>Read more</span></div>
                             </a>
                             <small><?php $terms = get_the_terms($tour->ID, 'tour-category');

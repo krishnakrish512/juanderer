@@ -5,19 +5,8 @@ $include_files = [
     "src/acf.php",
 //    "src/custom_post_type.php",
     "src/helper.php",
-//    "src/helper.php",
-//    "src/filter.php",
-//    "src/woocommerce_filter.php",
-//    "src/woocommerce_custom_checkout.php",
-//    "src/attachment_hooks.php",
-//    "src/acf_hooks.php",
-//	"src/photography_loadmore_ajax.php",
-//    "vendor/autoload.php",
-//    "src/watermark.php",
-//    "src/wcfm.php",
-//    "src/photography_ajax.php",
-//    "src/classes/SKA_Menu_Walker.php",
-//    "src/classes/SKA_Responsive_Menu_Walker.php"
+    "src/filter.php",
+
 ];
 
 array_walk( $include_files, function ( $file ) {
