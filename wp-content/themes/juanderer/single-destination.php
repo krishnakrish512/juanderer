@@ -63,12 +63,12 @@
                             <hr class="m-0">
                             <div class="description-block pt-4 mb-4" id="gallery">
                                 <h2>Gallery</h2>
-                                <div class="grid">
+                                <div class="isotope-wrapper grid">
                                     <ul class="magnific-gallery">
                                         <?php $images = get_field('gallery');
                                         foreach ($images as $image):
                                             ?>
-                                            <li>
+                                            <li class="isotope-item">
                                                 <figure>
                                                     <img src="<?= $image['url'] ?>" alt="">
                                                     <figcaption>
