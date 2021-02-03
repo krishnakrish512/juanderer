@@ -8,7 +8,6 @@
         </div>
     </section>
     <!--/hero_in-->
-
     <div class="container margin_60_35">
         <div class="isotope-wrapper">
             <?php while (have_posts()):
@@ -35,8 +34,6 @@
                 </div>
             <?php endwhile; ?>
         </div>
-
-<!--        <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>-->
     </div>
     <!-- /container -->
 <!--    --><?php //get_template_part('/partials/single-product/content_list'); ?>
