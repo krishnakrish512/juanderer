@@ -22,7 +22,7 @@
                                 <figure>
                                     <?php $image = get_the_post_thumbnail(get_the_ID(), 'thumb-crazy'); ?>
                                     <!--                                <a href="#0" class="wish_bt"></a>-->
-                                    <a href="<?php the_permalink(); ?>"><img src="<?= $image; ?>"
+                                    <a href="<?php the_permalink(); ?>"><img src="<?= $image; ?>">
                                         <!--                                                class="img-fluid" alt="-->
                                         <? //= esc_attr(get_the_title()) ?><!--" width="800"-->
                                         <!--                                                height="533">-->
