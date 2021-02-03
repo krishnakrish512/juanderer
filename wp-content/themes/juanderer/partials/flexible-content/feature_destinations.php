@@ -12,7 +12,7 @@
                 'orderby' => 'date',
                 'order' => 'DESC',
                 'post_status' => 'publish',
-                'posts_per_page' => 2,
+                'posts_per_page' => 4,
 //                'meta_key' => 'feature_destination',
 //                'meta_value' => 1
             ];

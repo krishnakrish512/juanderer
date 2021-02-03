@@ -39,7 +39,7 @@
     </div>
     <!-- /bg_color_1 -->
 
-    <?php get_template_part('/partials/single-product/content_list'); ?>
+<!--    --><?php //get_template_part('/partials/single-product/content_list'); ?>
 </main>
 <!--/main-->
 <?php get_footer(); ?>

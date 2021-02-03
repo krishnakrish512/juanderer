@@ -21,11 +21,7 @@
                             <?php if (has_post_thumbnail()): ?>
                                 <figure>
                                     <?php $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb'); ?>
-                                    <!--                                <a href="#0" class="wish_bt"></a>-->
-                                    <a href="<?php the_permalink(); ?>"><img
-                                                src="<?= $image ?>"
-<!--                                                class="img-fluid" alt="--><?//= esc_attr(get_the_title()) ?><!--" width="800"-->
-<!--                                                height="533">-->
+                                    <a href="<?php the_permalink(); ?>"><?= $image; ?>
                                         <div class="read_more"><span>Read more</span></div>
                                     </a>
                                     <small><?php $terms = get_the_terms($post->ID, 'activities-category');
@@ -42,8 +38,8 @@
                                     <span class="price">From <strong>$<?php the_field('price'); ?><small>/person</small></strong> </span>
                                 <?php endif; ?>
                                 <?php if (!get_field('price')): ?>
-                                <a href="<?php the_permalink(); ?>"
-                                <h1>Get A Quote Now</h1></a>
+                                    <a href="<?php the_permalink(); ?>"
+                                    <h1>Get A Quote Now</h1></a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -60,7 +56,7 @@
     </div>
     <!-- /container -->
 
-    <?php get_template_part('/partials/single-product/content_list'); ?>
+<!--    --><?php //get_template_part('/partials/single-product/content_list'); ?>
 </main>
 <!--/main-->
 <?php get_footer(); ?>
