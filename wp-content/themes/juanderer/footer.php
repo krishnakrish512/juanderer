@@ -10,7 +10,7 @@
                     <ul>
                         <li>Follow us</li>
                         <?php if ($social['facebook_url']): ?>
-                            <li><a href="<?= $social['facebook_url'] ?> " ><i class="ti-facebook"  ></i></a></li>
+                            <li><a href="<?= $social['facebook_url'] ?> "><i class="ti-facebook"></i></a></li>
                         <?php endif; ?>
                         <?php if ($social['tripadvisor']): ?>
                             <li><a href="<?= $social['tripadvisor'] ?>"><i class="fab fa-tripadvisor"></i></a></li>
@@ -28,16 +28,14 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5>Thailand Address:</h5>
+                <h5>Contact Us:</h5>
                 <ul class="contacts">
                     <li><?= $contact['thailand_address'] ?></li>
                     <li><a href="tel://+6696 704 6245"><i class="ti-mobile"></i> <?= $contact['thailand_number'] ?></a>
                     </li>
-                    <li><a href="mailto:info@juanderertravels.com"><i class="ti-email"></i> <?= $contact['email'] ?></a>
-                    </li>
+<!--                    <li><a href="mailto:info@juanderertravels.com"><i class="ti-email"></i> --><?//= $contact['email'] ?><!--</a>-->
+<!--                    </li>-->
                 </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
                 <h5>Head Office(Philippines):</h5>
                 <ul class="contacts">
                     <li><?= $contact['head_office_address'] ?></li>
