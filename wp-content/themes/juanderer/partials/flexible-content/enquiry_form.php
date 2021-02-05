@@ -13,7 +13,7 @@ if (($_GET['destination_id'])) {
 }
 if (($_GET['airticket_id'])) {
     $air_id = $_GET['airticket_id'];
-    $air_name = get_the_title($air_id);
+    $air_name =get_the_title($air_id);
 //        var_dump($air_name);
 //        exit();
 }

@@ -49,6 +49,8 @@
                             <li><?= $contact['head_office_address'] ?></li>
                             <li><a href="tel://+63 9193942094"><i
                                             class="ti-mobile"></i> <?= $contact['head_office_number'] ?></a>
+                            <li><a href="tel://+632 997 4912"><i
+                                        class="ti-mobile"></i> <?= $contact['philippines_number'] ?></a>
                             </li>
                             <li><a href="mailto:sales@juanderertravels.com"><i
                                             class="ti-email"></i> <?= $contact['philippines_email'] ?></a>

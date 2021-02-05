@@ -18,17 +18,24 @@
                 <li>
                     <i class="pe-7s-map-marker"></i>
                     <h4>Address</h4>
-                    <span><?= $contact['address'] ?></span>
+                    <hr>
+                    <h6 class="text-white">Thailand</h6>
+                    <span><?= $contact['thailand_address'] ?></span>
+                    <hr>
+                    <h6 class="text-white">Philippines</h6>
+                    <span><?= $contact['head_office_address'] ?></span>
                 </li>
                 <li>
                     <i class="pe-7s-mail-open-file"></i>
                     <h4>Email address</h4>
+                    <hr>
                     <span><?= $contact['email'] ?><br><small>Monday to Friday 9am - 7pm</small></span>
                 </li>
                 <li>
                     <i class="pe-7s-phone"></i>
                     <h4>Contacts info</h4>
-                    <span><?= $contact['phone_number'] ?><br><small>Monday to Friday 9am - 7pm</small></span>
+                    <hr>
+                    <span><?= $contact['philippines_number'] ?><br><small>Monday to Friday 9am - 7pm</small></span>
                 </li>
             </ul>
         </div>
