@@ -429,7 +429,7 @@
 	});
 
 	//input disabled
-	$('input[name="tour"]').attr('disabled', 'disabled');
+	//$('input[name="tour"]').attr('disabled', 'disabled');
 	$('input[name="dates"]').attr('autocomplete', 'off');
 
 
