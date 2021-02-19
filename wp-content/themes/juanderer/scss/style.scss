@@ -7155,3 +7155,14 @@ ul.plan-features {
 		display:none;
 	}
 }
+
+.design-by{
+		color: #fff;
+		opacity: 0.5;
+		@include transition-default;
+		
+		&:hover {
+			opacity: 1;
+			color: $primary;
+		}
+	}

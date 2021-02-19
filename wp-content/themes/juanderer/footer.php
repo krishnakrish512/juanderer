@@ -65,9 +65,7 @@
         <hr>
         <div class="row">
             <div class="col-lg-6">
-                <ul id="footer-selector">
-                    <li><img src="assets/images/cards_all.svg" alt=""></li>
-                </ul>
+                Website by <a href="https://nirvanstudio.com/" target="_blank" class="design-by">Nirvan Studio </a>
             </div>
             <div class="col-lg-6">
                 <ul id="additional_links">
