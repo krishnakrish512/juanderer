@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Panagea - Premium site template for travel agencies, hotels and restaurant listing.">
     <meta name="author" content="Ansonika">
-    <title>Juanderer Travel</title>
+    <title>Juanderer Travels</title>
 
 
     <!-- GOOGLE WEB FONT -->
