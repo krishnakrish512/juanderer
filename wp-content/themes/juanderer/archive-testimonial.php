@@ -15,31 +15,26 @@
                 ?>
                 <div class="row">
                     <div class="col-xl-4 col-lg-6 col-md-6 isotope-item ">
-                        <?php while (have_rows('testimonial_repeater')):
-                            the_row();
-                            ?>
-                            <div class="box_grid auther-grid">
-                                <div class="wrapper">
-                                    <div class="auther-grid-header d-flex border-bottom mb-3">
-                                        <span class="icon-quote-left text-primary h4 mr-3"></span>
-                                        <h5><?php the_sub_field('author_name'); ?> <span
-                                                    class="d-block text-secondary"><?php the_sub_field('author_title'); ?></span>
-                                        </h5>
-                                    </div>
-                                    <p><?php the_sub_field('description'); ?></p>
+                        <div class="box_grid auther-grid">
+                            <div class="wrapper">
+                                <div class="auther-grid-header d-flex border-bottom mb-3">
+                                    <span class="icon-quote-left text-primary h4 mr-3"></span>
+                                    <h5><?php the_title(); ?> <span
+                                                class="d-block text-secondary"><?php the_field('title'); ?></span>
+                                    </h5>
                                 </div>
+                                <p><?php the_field('testimonial'); ?></p>
                             </div>
-                        <?php endwhile; ?>
+                        </div>
                     </div>
                 </div>
             <?php endwhile; ?>
         </div>
     </div>
     <!-- /container -->
-<!--    --><?php //get_template_part('/partials/single-product/content_list'); ?>
+    <!--    --><?php //get_template_part('/partials/single-product/content_list'); ?>
     <!-- /bg_color_1 -->
 </main>
 <!--/main-->
-
 
 <?php get_footer(); ?>

@@ -13,7 +13,7 @@ if (($_GET['destination_id'])) {
 }
 if (($_GET['airticket_id'])) {
     $air_id = $_GET['airticket_id'];
-    $air_name =get_the_title($air_id);
+    $air_name = get_the_title($air_id);
 //        var_dump($air_name);
 //        exit();
 }
@@ -55,9 +55,9 @@ if (($_GET['airticket_id'])) {
                                 ?>
                                 <li>
                                     <div class="alignleft">
-                                        <a href="<?php the_sub_field('link');?>"><img src="<?= $image; ?>" alt=""></a>
+                                        <a href="<?php the_sub_field('link'); ?>"><img src="<?= $image; ?>" alt=""></a>
                                     </div>
-                                    <h3><a href="<?php the_sub_field('link');?>"
+                                    <h3><a href="<?php the_sub_field('link'); ?>"
                                            title=""><?php the_sub_field('title'); ?></a></h3>
                                 </li>
                             <?php endwhile; ?>
@@ -74,7 +74,7 @@ if (($_GET['airticket_id'])) {
 <!--/main-->
 
 <script>
-    jQuery('[name="tour"]').val('<?= $tour_name, $destination_name, $air_name; ?>');
+    jQuery('[name="tour"]').val('<?= $tour_name, $destination_name, $air_name ?>');
 
 </script>
 

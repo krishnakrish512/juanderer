@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Panagea - Premium site template for travel agencies, hotels and restaurant listing.">
+    <meta name="description" content="">
     <meta name="author" content="Ansonika">
-    <title>Juanderer Travel</title>
+    <title><?php bloginfo('name'); ?></title>
 
 
     <!-- GOOGLE WEB FONT -->

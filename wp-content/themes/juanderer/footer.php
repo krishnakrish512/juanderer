@@ -26,8 +26,19 @@
                         <?php endif; ?>
                     </ul>
                 </div>
-            </div>
 
+                <div id="newsletter" class="">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <h6 class="m-0">Subscribe Our Newsletter</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <div id="message-newsletter"></div>
+                            <?php echo do_shortcode( '[newsletter_form form="1"]' ) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-6 col-md-12">
                 <h5>Contact Address</h5>
                 <div class="row">
@@ -50,7 +61,7 @@
                             <li><a href="tel://+63 9193942094"><i
                                             class="ti-mobile"></i> <?= $contact['head_office_number'] ?></a>
                             <li><a href="tel://+632 997 4912"><i
-                                        class="ti-mobile"></i> <?= $contact['philippines_number'] ?></a>
+                                            class="ti-mobile"></i> <?= $contact['philippines_number'] ?></a>
                             </li>
                             <li><a href="mailto:sales@juanderertravels.com"><i
                                             class="ti-email"></i> <?= $contact['philippines_email'] ?></a>

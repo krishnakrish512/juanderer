@@ -172,7 +172,7 @@
                             <!--                            <p>--><?php //the_content();
                             ?><!--</p>-->
                             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
-                               class="btn_1 full-width purchase mb-3">Inquiry</a>
+                               class="btn_1 full-width purchase mb-3">Book Your Tour Now</a>
                             <div class="badge-wrap"><span class="badge">Or</span></div>
 
                             <div class="inquiry-by mt-3 d-flex align-items-center justify-content-between">
