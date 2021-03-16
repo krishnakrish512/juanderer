@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Ansonika">
+<<<<<<< HEAD
     <title><?php bloginfo('name'); ?></title>
+=======
+    <title>Juanderer Travels</title>
+>>>>>>> 987ee4d75072ec9647d2cffd9ef375349e3cccaf
 
 
     <!-- GOOGLE WEB FONT -->
